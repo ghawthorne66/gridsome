@@ -6,5 +6,18 @@
 
 module.exports = {
   siteName: 'C-Side',
-  plugins: []
-}
+  siteDescription: 'A designer boutique',
+  plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/posts/**/*.md',
+        typeName: 'Post',
+      }
+    }
+  ],
+  templates: {
+    Post: '/posts/:slug'
+    }
+};
+
