@@ -14,14 +14,19 @@
       <a href="https://gridsome.org/docs" target="_blank" rel="noopener">Gridsome Docs</a>
       <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
     </p>
+    <Footer></Footer>
 
   </Layout>
 </template>
 
 <script>
+import Footer from '~/components/Footer.vue'
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'Hello, world!'      
+  },
+  components: {
+    Footer
   }
 }
 </script>
