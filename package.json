@@ -10,6 +10,7 @@
     "@gridsome/source-contentful": "^0.6.0",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
+    "dotenv": "^8.2.0",
     "gridsome": "^0.7.23",
     "vue-disqus": "^4.0.1"
   }
