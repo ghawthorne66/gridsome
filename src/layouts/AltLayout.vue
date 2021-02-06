@@ -7,11 +7,12 @@
       <nav class="nav">
         <g-link exact class="nav__link" to="/">Home</g-link>
         <g-link class="nav__link" to="/about">About</g-link>
+        <g-link class="nav__link" to="/blog">Blog</g-link>
         <g-link class="nav__link" to="/products">Products</g-link>
       </nav>
     </header>
-    <slot/>
-    <Footer v-if="showFooter"></Footer> 
+    <slot />
+    <Footer v-if="showFooter"></Footer>
   </div>
 </template>
 
@@ -24,19 +25,21 @@ query {
 </static-query>
 
 <script>
-    import Footer from '~/components/Footer.vue'
+import Footer from "~/components/Footer.vue";
 export default {
-    components: {
-        Footer
-    },
-props: ['showFooter']}
+  components: {
+    Footer,
+  },
+  props: ["showFooter"],
+};
 </script>
 
 <style>
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   line-height: 1.5;
 }
 
@@ -56,11 +59,11 @@ body {
 }
 
 .body {
-    background: #f3f7f9;
+  background: #f3f7f9;
 }
 
 .active {
-    color: #f66;
+  color: #f66;
 }
 
 .nav__link {
