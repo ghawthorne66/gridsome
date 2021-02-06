@@ -11,12 +11,12 @@ module.exports = {
     {
       use: '@gridsome/source-contentful',
       options: {
-        space: 'j49x8ubttir3', // required
-        accessToken: 'hokou6PGGRwOuqNHY88MlZW_g6S118Z8fWKKjIDAqmo', // required
+        space: 'process.env.CONTENTFUL_SPACE_TOKEN', // required
+        accessToken: 'process.env.CONTENTFUL_ACCESS_TOKEN', // required
         host: 'cdn.contentful.com',
         environment: 'master',
         typeName: 'Contentful'
-      }
+      } 
     },
     {
       use: "@gridsome/source-filesystem",
