@@ -9,12 +9,22 @@ module.exports = {
   siteDescription: "A designer boutique",
   plugins: [
     {
+      use: '@gridsome/source-contentful',
+      options: {
+        space: 'j49x8ubttir3', // required
+        accessToken: 'hokou6PGGRwOuqNHY88MlZW_g6S118Z8fWKKjIDAqmo', // required
+        host: 'cdn.contentful.com',
+        environment: 'master',
+        typeName: 'Contentful'
+      }
+    },
+    {
       use: "@gridsome/source-filesystem",
       options: {
         baseDir: "./content/posts",
         path: "*.md",
         typeName: "Post",
-        route: "/posts/:slug",
+        route: "/posts/:title",
         refs: {
           tags: {
             typeName: 'Tag',

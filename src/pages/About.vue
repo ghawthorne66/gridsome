@@ -1,13 +1,13 @@
 <template>
   <Layout>
     <h1>About us</h1>
-    <p>{{ $static.metaData.siteDescription }}</p>
+    <p>{{ $static.metadata.siteDescription }}</p>
   </Layout>
 </template>
 
 <static-query>
 {
-  metaData {
+  metadata {
     siteDescription
   }
 }
@@ -19,7 +19,7 @@ export default {
     return {
       title: "About us",
       meta: [
-        { name: "description", content: this.$static.metaData.siteDescription },
+        { name: "description", content: this.$static.metadata.siteDescription },
       ],
     };
   },
