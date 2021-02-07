@@ -3,7 +3,7 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
-require('dotenv').config();
+require('dotenv').config()
 module.exports = {
   siteName: "C-Side",
   siteDescription: "A designer boutique",
@@ -11,12 +11,12 @@ module.exports = {
     {
       use: '@gridsome/source-contentful',
       options: {
-        space: 'process.env.GRIDSOME_SPACE_ID', // required
-        accessToken: 'process.env.GRIDSOME_ACCESS_TOKEN', // required
+        space: process.env.GRIDSOME_CONTENTFUL_SPACE_ID, // required
+        accessToken: process.env.GRIDSOME_CONTENTFUL_DELIVERY_TOKEN, // required
         host: 'cdn.contentful.com',
         environment: 'master',
         typeName: 'Contentful'
-      } 
+      }
     },
     {
       use: "@gridsome/source-filesystem",
